@@ -79,3 +79,11 @@ moscow_paris (расстояние между Москвой и Парижем),
 ## Проделанная работа:
 По примеру рассчитали сумму каждого товара и на какую сумму лежит каждого товара.
 ## Результат: ![image](https://github.com/user-attachments/assets/8ef9b1eb-e5e7-4b39-9cdc-ff834d7a7809)
+
+
+
+#-------------------------
+# Шпора
+git init
+git remote add origin [repository]
+git push -u origin main
