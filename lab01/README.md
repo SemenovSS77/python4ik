@@ -95,6 +95,6 @@ git push -u origin main - отправка изменений
 
 # ------------------------------------------------------------------------------
 # Использованные материалы
-https://youtu.be/y94qMJlTtsM?si=NnZBdP8S3eoOHtyg  
-https://pythonworld.ru/tipy-dannyx-v-python/spiski-list-funkcii-i-metody-spiskov.html  
-https://pythonworld.ru/tipy-dannyx-v-python/slovari-dict-funkcii-i-metody-slovarej.html
+[git](https://youtu.be/y94qMJlTtsM?si=NnZBdP8S3eoOHtyg)  
+[list](https://pythonworld.ru/tipy-dannyx-v-python/spiski-list-funkcii-i-metody-spiskov.html)  
+[dict](https://pythonworld.ru/tipy-dannyx-v-python/slovari-dict-funkcii-i-metody-slovarej.html)
