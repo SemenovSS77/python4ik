@@ -81,9 +81,14 @@ moscow_paris (расстояние между Москвой и Парижем),
 ## Результат: ![image](https://github.com/user-attachments/assets/8ef9b1eb-e5e7-4b39-9cdc-ff834d7a7809)
 
 
-
 # -------------------------
 # Шпора
-git init  
-git remote add origin [repository]  
-git push -u origin main
+git init - инициализация репозитория  
+git remote add origin [repository] - добавление удаленного репозитория  
+git push -u origin main - отправка изменений
+
+
+#--------------------------
+# Использованные материалы
+https://youtu.be/y94qMJlTtsM?si=NnZBdP8S3eoOHtyg
+https://pythonworld.ru/tipy-dannyx-v-python/spiski-list-funkcii-i-metody-spiskov.html
