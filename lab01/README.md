@@ -85,6 +85,7 @@ moscow_paris (расстояние между Москвой и Парижем),
 # Шпора
 git init - инициализация репозитория  
 git remote add origin [repository] - добавление удаленного репозитория  
+git commit -m "comm"  
 git push -u origin main - отправка изменений
 
 
