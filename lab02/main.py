@@ -1,8 +1,6 @@
 def n1():
     alphabet = ["К", "А", "Т", "Е", "Р"]
     length = 6
-    fchar = "Р"
-    lchar = "К"
     count = len(alphabet) ** (length - 2)
     print(count)
 
