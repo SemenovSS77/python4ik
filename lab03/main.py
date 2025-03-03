@@ -26,11 +26,11 @@ def sequence_recursive(k):
 
 def sequence_iterative(k):
     a, b = 1, 1
-    for _ in range(2, k + 1):
+    for nothing in range(2, k + 1):
         a, b = 2 * b + a, 2 * a + b
     return a, b
 
-print(linearize_recursive([1, 2, [3, 4, [5, [6, []]]]]))
-print(linearize_iterative([1, 2, [3, 4, [5, [6, []]]]]))
+# print(linearize_recursive([1, 2, [3, 4, [5, [6, []]]]]))
+#print(linearize_iterative([1, 2, [3, 4, [5, [6, []]]]]))
 print(sequence_recursive(5))
-print(sequence_iterative(5))
+#print(sequence_iterative(5))

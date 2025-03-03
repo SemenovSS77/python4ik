@@ -3,6 +3,14 @@
 from distance00 import ddistance
 from circle01 import ccircle
 from operations02 import ooperations
+from favorite_movies03 import ffavorite_movies
+from my_family04 import mmy_family
+from zoo05 import zzoo
+from songs_list06 import ssongs_list
+from secret07 import ssecret
+from garden08 import ggarden
+from shopping09 import sshopping
+from store10 import sstore
 
 
 def test_ddistance(capsys):
@@ -22,3 +30,11 @@ def test_ooperations(capsys):
     captured = capsys.readouterr()
     expected_output = "9\n25\n"
     assert captured.out == expected_output
+
+def test_ffavorite_movies(capsys):
+    ffavorite_movies()
+    captured = capsys.readouterr()
+    expected_output = "\n Терминатор \n Назад в будущее \n Пятый элемент \n Чужие\n"
+    # "\n", film1, "\n", last_film, "\n", film2, "\n", rfilm2
+    assert captured.out == expected_output
+
