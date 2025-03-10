@@ -15,7 +15,7 @@ def linearize_iterative(lst):
             stack.extend(reversed(current))
         else:
             result.append(current)
-    return result
+    return result   
 
 # 2) Функция для расчёта
 def sequence_recursive(k):
