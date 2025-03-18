@@ -1,25 +1,36 @@
-def apply_n_times(func, n, value):
-    for _ in range(n):
-        value = func(value)
-    return value
+# 1) Функция для линеаризации вложенных списков
+def linearize_recursive(lst):
+    if not lst:
+        return []
+    if isinstance(lst[0], list):
+        return linearize_recursive(lst[0]) + linearize_recursive(lst[1:])
+    return [lst[0]] + linearize_recursive(lst[1:])
 
-def filter_changed(seq, func, n, threshold):
-    for item in seq:
-        new_item = apply_n_times(func, n, item)
-        if abs(new_item - item) > threshold * abs(item):
-            yield new_item
+def linearize_iterative(lst):
+    result = []
+    stack = [lst]
+    while stack:
+        current = stack.pop()
+        if isinstance(current, list):
+            stack.extend(reversed(current))
+        else:
+            result.append(current)
+    return result   
 
-def square(x):
-    return x ** 2
+# 2) Функция для расчёта
+def sequence_recursive(k):
+    if k == 1:
+        return (1, 1)
+    a_prev, b_prev = sequence_recursive(k - 1)
+    return (2 * b_prev + a_prev, 2 * a_prev + b_prev)
 
-numbers = [5, 3, 4, 1, 2]
-n = 2
-threshold = 5
+def sequence_iterative(k):
+    a, b = 1, 1
+    for nothing in range(2, k + 1):
+        a, b = 2 * b + a, 2 * a + b
+    return a, b
 
-result_generator = filter_changed(numbers, square, n, threshold)
-
-out_filter = filter(lambda x: x > 15, result_generator)
-
-sorted_result = sorted(out_filter)
-
-print(sorted_result)
+# print(linearize_recursive([1, 2, [3, 4, [5, [6, []]]]]))
+#print(linearize_iterative([1, 2, [3, 4, [5, [6, []]]]]))
+print(sequence_recursive(5))
+#print(sequence_iterative(5))
