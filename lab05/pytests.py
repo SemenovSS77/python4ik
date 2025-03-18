@@ -1,34 +1,14 @@
 import pytests
-from main import linearize_recursive, linearize_iterative, sequence_recursive, sequence_iterative
+from main import apply_n_times, filter_changed, square
 
-# Тест для linearize_recursive
-def test_linearize_recursive(capsys):
-    # Вызываем функцию, которая печатает результат
-    print(linearize_recursive([1, 2, [3, 4, [5, [6, []]]]]))
-    captured = capsys.readouterr()  # Захватываем вывод
-    expected_output = "[1, 2, 3, 4, 5, 6]\n"  # Ожидаемый вывод
-    assert captured.out == expected_output
-
-# Тест для linearize_iterative
-def test_linearize_iterative(capsys):
-    # Вызываем функцию, которая печатает результат
-    print(linearize_iterative([1, 2, [3, 4, [5, [6, []]]]]))
-    captured = capsys.readouterr()  # Захватываем вывод
-    expected_output = "[1, 2, 3, 4, 5, 6]\n"  # Ожидаемый вывод
-    assert captured.out == expected_output
-
-# Тест для sequence_recursive
-def test_sequence_recursive(capsys):
-    # Вызываем функцию, которая печатает результат
-    print(sequence_recursive(5))
-    captured = capsys.readouterr()  # Захватываем вывод
-    expected_output = "(81, 81)\n"  # Ожидаемый вывод
-    assert captured.out == expected_output
-
-# Тест для sequence_iterative
-def test_sequence_iterative(capsys):
-    # Вызываем функцию, которая печатает результат
-    print(sequence_iterative(5))
-    captured = capsys.readouterr()  # Захватываем вывод
-    expected_output = "(81, 81)\n"  # Ожидаемый вывод
+def test_filter_changed(capsys):
+    numbers = [5, 3, 4, 1, 2]
+    n = 2
+    
+    result_generator = filter_changed(numbers, square, n)
+    out_filter = filter(lambda x: x > 15, result_generator) #фильтр
+    sorted_result = list(out_filter)
+    print(sorted_result)
+    captured = capsys.readouterr()
+    expected_output = "[625, 81, 256]\n"
     assert captured.out == expected_output
