@@ -18,7 +18,7 @@ threshold = 5
 
 result_generator = filter_changed(numbers, square, n, threshold)
 
-out_filter = filter(lambda x: x > 15, result_generator)
+out_filter = filter(lambda x: x > 0, result_generator)
 
 sorted_result = sorted(out_filter)
 
